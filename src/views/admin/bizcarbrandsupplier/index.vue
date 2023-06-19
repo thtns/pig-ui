@@ -60,9 +60,9 @@
             ...mapGetters(['permissions']),
             permissionList() {
                 return {
-                    addBtn: this.validData(this.permissions.demo_bizcarbrandsupplier_add, false),
-                    delBtn: this.validData(this.permissions.demo_bizcarbrandsupplier_del, false),
-                    editBtn: this.validData(this.permissions.demo_bizcarbrandsupplier_edit, false)
+                    addBtn: this.validData(this.permissions.admin_bizcarbrandsupplier_add, false),
+                    delBtn: this.validData(this.permissions.admin_bizcarbrandsupplier_del, false),
+                    editBtn: this.validData(this.permissions.admin_bizcarbrandsupplier_edit, false)
                 };
             }
         },
