@@ -1,6 +1,6 @@
 export default {
   tip: '提示',
-  title: 'Pig 快速开发框架',
+  title: 'ExCar 汽车咨询',
   logoutTip: '退出系统, 是否继续?',
   submitText: '确定',
   cancelText: '取消',
@@ -69,7 +69,7 @@ export default {
   },
   login: {
     title: '登录 ',
-    info: 'Pig 快速开发框架',
+    info: 'ExCar 汽车咨询',
     tenantId: '请输入租户ID',
     username: '请输入账号',
     password: '请输入密码',

@@ -16,12 +16,12 @@ export const tableOption = {
     },
     {
       "type": "input",
-      "label": "商家API对接key",
+      "label": "商家key",
       "prop": "clientKey"
     },
     {
       "type": "input",
-      "label": "商家API对接secret",
+      "label": "商家secret",
       "prop": "clientSecret"
     },
     {
@@ -51,7 +51,7 @@ export const tableOption = {
     },
     {
       "type": "input",
-      "label": "状态:正常/禁用/已过期",
+      "label": "状态",
       "prop": "status"
     },
     {
