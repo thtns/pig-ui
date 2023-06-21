@@ -21,8 +21,8 @@ export const tableOption = {
     },
     {
       "type": "input",
-      "label": "商家secret",
-      "prop": "clientSecret"
+      "label": "商家aesSecret",
+      "prop": "aecSecret"
     },
     {
       "type": "input",
