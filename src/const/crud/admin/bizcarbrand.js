@@ -21,22 +21,22 @@ export const tableOption = {
     },
     {
       "type": "input",
-      "label": "车辆品牌首字母",
+      "label": "品牌首字母",
       "prop": "letter"
     },
     {
       "type": "input",
-      "label": "车辆品牌logo地址",
+      "label": "logo地址",
       "prop": "logoUrl"
     },
     {
       "type": "input",
-      "label": "wmi即vin码前三位",
+      "label": "wmi",
       "prop": "wmi"
     },
     {
       "type": "input",
-      "label": "类型 10:国产,20:合资",
+      "label": "类型 ",
       "prop": "type"
     },
     {
@@ -48,7 +48,7 @@ export const tableOption = {
     },
     {
       "type": "input",
-      "label": "修改时间",
+      "label": "创建时间",
       "prop": "createTime",
       "addDisplay": false,
       "editDisabled": true
