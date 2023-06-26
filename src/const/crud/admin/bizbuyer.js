@@ -5,6 +5,7 @@ export const tableOption = {
   "stripe": true,
   "menuAlign": "center",
   "align": "center",
+  "headerAlign":'center',
   "searchMenuSpan": 6,
   "column": [
     {
@@ -17,12 +18,15 @@ export const tableOption = {
     {
       "type": "input",
       "label": "商家key",
-      "prop": "clientKey"
+      "prop": "clientKey",
+      overHidden:true,
     },
     {
       "type": "input",
-      "label": "商家aesSecret",
-      "prop": "aecSecret"
+      "label": "商家aecSec",
+      "prop": "aecSecret",
+      overHidden:true,
+
     },
     {
       "type": "input",
@@ -32,7 +36,8 @@ export const tableOption = {
     {
       "type": "input",
       "label": "注册手机号",
-      "prop": "mobile"
+      "prop": "mobile",
+      hide:true
     },
     {
       "type": "input",
@@ -41,13 +46,15 @@ export const tableOption = {
     },
     {
       "type": "input",
-      "label": "负责人联系方式",
+      "label": "联系方式",
       "prop": "directorMobile"
     },
     {
-      "type": "input",
-      "label": "每日限单数量",
-      "prop": "dailylimitCount"
+      "type": "number",
+      "label": "每日限单数",
+      "prop": "dailylimitCount",
+      "value":2,
+      "step":5,
     },
     {
       "type": "input",
@@ -55,47 +62,59 @@ export const tableOption = {
       "prop": "status"
     },
     {
-      "type": "input",
-      "label": "有效期开始日期",
-      "prop": "validityStart"
+      "type": "datetime",
+      "label": "有效期开始",
+      "prop": "validityStart",
+      "format": "YYYY-MM-DD HH:mm:ss",
+      "valueFormat":'YYYY-MM-DD HH:mm:ss',
     },
     {
-      "type": "input",
-      "label": "有效期结束日期",
-      "prop": "validityEnd"
+      "type": "datetime",
+      "label": "有效期结束",
+      "prop": "validityEnd",
+      "format": "YYYY-MM-DD HH:mm:ss",
+      "valueFormat":'YYYY-MM-DD HH:mm:ss',
+
     },
     {
       "type": "input",
       "label": "备注",
-      "prop": "remark"
+      "prop": "remark",
+      hide:true
     },
     {
       "type": "input",
       "label": "创建时间",
       "prop": "createTime",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide:true
     },
     {
       "type": "input",
       "label": "创建人",
       "prop": "createBy",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      showColumn:false,
+      hide:true
+
     },
     {
       "type": "input",
       "label": "修改时间",
       "prop": "updateTime",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide:true
     },
     {
       "type": "input",
       "label": "更新人",
       "prop": "updateBy",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide:true
     }
   ]
 }
