@@ -17,7 +17,8 @@ export const tableOption = {
     {
       "type": "input",
       "label": "采购商Id",
-      "prop": "buyerId"
+      "prop": "buyerId",
+      hide: true
     },
     {
       "type": "input",
@@ -27,7 +28,8 @@ export const tableOption = {
     {
       "type": "input",
       "label": "供应商ID",
-      "prop": "supplierId"
+      "prop": "supplierId",
+      hide: true
     },
     {
       "type": "input",
@@ -37,7 +39,8 @@ export const tableOption = {
     {
       "type": "input",
       "label": "品牌id",
-      "prop": "carBrandId"
+      "prop": "carBrandId",
+      hide: true
     },
     {
       "type": "input",
@@ -47,12 +50,14 @@ export const tableOption = {
     {
       "type": "input",
       "label": "机器人ID",
-      "prop": "robotId"
+      "prop": "robotId",
+      hide: true
     },
     {
       "type": "input",
       "label": "请求IP地址信息",
-      "prop": "requestIpAddress"
+      "prop": "requestIpAddress",
+      hide: true
     },
     {
       "type": "input",
@@ -62,12 +67,14 @@ export const tableOption = {
     {
       "type": "input",
       "label": "请求参数",
-      "prop": "requestParams"
+      "prop": "requestParams",
+      overHidden: true,
     },
     {
       "type": "input",
-      "label": "请求header信息",
-      "prop": "requestHeader"
+      "label": "请求header",
+      "prop": "requestHeader",
+      overHidden: true,
     },
     {
       "type": "input",
@@ -82,27 +89,44 @@ export const tableOption = {
     {
       "type": "input",
       "label": "回调地址",
-      "prop": "callbackUrl"
+      "prop": "callbackUrl",
+      overHidden: true,
     },
     {
-      "type": "input",
-      "label": "结果状态码：1：下单成功，2：下单失败，3：回调成功，4：回调失败",
-      "prop": "requestStatus"
+      "type": "radio",
+      "label": "结果状态码",
+      "prop": "requestStatus",
+      dicData: [{
+        label: '下单成功',
+        value: 1
+      }, {
+        label: '下单失败',
+        value: 2
+      }, {
+        label: '回调成功',
+        value: 3
+      }, {
+        label: '回调失败',
+        value: 4
+      }]
     },
     {
       "type": "input",
       "label": "失败原因",
-      "prop": "failureReason"
+      "prop": "failureReason",
+      hide: true
     },
     {
       "type": "input",
       "label": "查询成功结果",
-      "prop": "result"
+      "prop": "result",
+      hide: true
     },
     {
       "type": "input",
       "label": "回调时间",
-      "prop": "callbackTime"
+      "prop": "callbackTime",
+      hide: true
     },
     {
       "type": "input",
@@ -119,28 +143,32 @@ export const tableOption = {
       "label": "创建人",
       "prop": "createBy",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     },
     {
       "type": "input",
       "label": "修改时间",
       "prop": "createTime",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     },
     {
       "type": "input",
       "label": "修改时间",
       "prop": "updateTime",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     },
     {
       "type": "input",
       "label": "更新人",
       "prop": "updateBy",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     }
   ]
 }
