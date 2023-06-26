@@ -12,7 +12,9 @@ export const tableOption = {
       "label": "主键id",
       "prop": "id",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      width:180,
+
     },
     {
       "type": "input",
@@ -36,41 +38,53 @@ export const tableOption = {
     },
     {
       "type": "input",
-      "label": "状态 0；关闭 1，开启",
-      "prop": "status"
+      "label": "供应商logo",
+      "prop": "logo",
+      overHidden:true,
     },
     {
-      "type": "input",
-      "label": "供应商logo",
-      "prop": "logo"
+      "type": "radio",
+      "label": "状态",
+      "prop": "status",
+      dicData: [{
+        label: '开启',
+        value: 1
+      }, {
+        label: '关闭',
+        value: 0
+      }]
     },
     {
       "type": "input",
       "label": "创建人",
       "prop": "createBy",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     },
     {
       "type": "input",
       "label": "修改时间",
       "prop": "createTime",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     },
     {
       "type": "input",
       "label": "修改时间",
       "prop": "updateTime",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     },
     {
       "type": "input",
       "label": "更新人",
       "prop": "updateBy",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     }
   ]
 }

@@ -1,91 +1,119 @@
 export const tableOption = {
-  "border": true,
-  "index": true,
-  "indexLabel": "序号",
-  "stripe": true,
-  "menuAlign": "center",
-  "align": "center",
-  "searchMenuSpan": 6,
-  "column": [
-    {
-      "type": "input",
-      "label": "主键id",
-      "prop": "id",
-      "addDisplay": false,
-      "editDisabled": true
-    },
-    {
-      "type": "input",
-      "label": "状态:启用/禁用",
-      "prop": "status"
-    },
-    {
-      "type": "input",
-      "label": "机器人访问地址",
-      "prop": "robotUrl"
-    },
-    {
-      "type": "input",
-      "label": "robotProxies",
-      "prop": "robotProxies"
-    },
-    {
-      "type": "input",
-      "label": "账号-密码（多个）",
-      "prop": "robotAccountPassword"
-    },
-    {
-      "type": "input",
-      "label": "代理名称",
-      "prop": "robotProxiesName"
-    },
-    {
-      "type": "input",
-      "label": "是否需要代理 0；关闭 1，开启",
-      "prop": "needDynamicProxy"
-    },
-    {
-      "type": "input",
-      "label": "测试VIN码",
-      "prop": "testVin"
-    },
-    {
-      "type": "input",
-      "label": "机器人服务开始时间",
-      "prop": "serviceStartTime"
-    },
-    {
-      "type": "input",
-      "label": "机器人服务结束时间",
-      "prop": "serviceEndTime"
-    },
-    {
-      "type": "input",
-      "label": "创建人",
-      "prop": "createBy",
-      "addDisplay": false,
-      "editDisabled": true
-    },
-    {
-      "type": "input",
-      "label": "修改时间",
-      "prop": "createTime",
-      "addDisplay": false,
-      "editDisabled": true
-    },
-    {
-      "type": "input",
-      "label": "修改时间",
-      "prop": "updateTime",
-      "addDisplay": false,
-      "editDisabled": true
-    },
-    {
-      "type": "input",
-      "label": "更新人",
-      "prop": "updateBy",
-      "addDisplay": false,
-      "editDisabled": true
-    }
-  ]
+    "border": true,
+    "index": true,
+    "indexLabel": "序号",
+    "stripe": true,
+    "menuAlign": "center",
+    "align": "center",
+    "searchMenuSpan": 6,
+    "column": [
+        {
+            "type": "input",
+            "label": "主键id",
+            "prop": "id",
+            "addDisplay": false,
+            "editDisabled": true,
+            width:180,
+        },
+        {
+            "type": "input",
+            "label": "访问地址",
+            "prop": "robotUrl",
+            overHidden:true,
+        },
+        {
+            "type": "input",
+            "label": "代理Proxies",
+            "prop": "robotProxies",
+            overHidden:true,
+        },
+        {
+            "type": "input",
+            "label": "账号-密码",
+            "prop": "robotAccountPassword",
+            overHidden:true,
+        },
+        {
+            "type": "input",
+            "label": "代理名称",
+            "prop": "robotProxiesName"
+        },
+        {
+            "type": "radio",
+            "label": "是否代理",
+            "prop": "needDynamicProxy",
+            value: 1,
+            dicData: [{
+                label: '开启',
+                value: 1
+            }, {
+                label: '关闭',
+                value: 0
+            }]
+        },
+        {
+            "type": "input",
+            "label": "测试VIN码",
+            "prop": "testVin"
+        },
+        {
+            "type": "time",
+            "label": "服务开始",
+            "prop": "serviceStartTime",
+            format: 'HH:mm:ss',
+            valueFormat: 'HH:mm:ss',
+        },
+        {
+            "type": "time",
+            "label": "服务结束",
+            "prop": "serviceEndTime",
+            format: 'HH:mm:ss',
+            valueFormat: 'HH:mm:ss',
+        },
+        {
+            "type": "radio",
+            "label": "状态",
+            "prop": "status",
+            value: true,
+            dicData: [{
+                label: '启动',
+                value: true
+            }, {
+                label: '禁用',
+                value: false
+            }]
+        },
+        {
+            "type": "input",
+            "label": "创建人",
+            "prop": "createBy",
+            "addDisplay": false,
+            "editDisabled": true,
+            hide: true
+        },
+        {
+            "type": "input",
+            "label": "修改时间",
+            "prop": "createTime",
+            "addDisplay": false,
+            "editDisabled": true,
+            hide: true
+        },
+        {
+            "type": "input",
+            "label": "修改时间",
+            "prop": "updateTime",
+            "addDisplay": false,
+            "editDisabled": true,
+            hide: true
+        },
+        {
+            "type": "input",
+            "label": "更新人",
+            "prop": "updateBy",
+            "addDisplay": false,
+            "editDisabled": true,
+            hide: true
+        }
+    ]
 }

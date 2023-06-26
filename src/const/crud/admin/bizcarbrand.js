@@ -12,12 +12,16 @@ export const tableOption = {
       "label": "主键id",
       "prop": "id",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      width:180,
+
     },
     {
       "type": "input",
       "label": "车辆品牌",
-      "prop": "brand"
+      "prop": "brand",
+      overHidden:true,
+
     },
     {
       "type": "input",
@@ -27,7 +31,9 @@ export const tableOption = {
     {
       "type": "input",
       "label": "logo地址",
-      "prop": "logoUrl"
+      "prop": "logoUrl",
+      overHidden:true,
+
     },
     {
       "type": "input",
@@ -35,9 +41,16 @@ export const tableOption = {
       "prop": "wmi"
     },
     {
-      "type": "input",
+      "type": "radio",
       "label": "类型 ",
-      "prop": "type"
+      "prop": "type",
+      dicData: [{
+        label: '国产',
+        value: 10
+      }, {
+        label: '合资',
+        value: 20
+      }]
     },
     {
       "type": "input",
