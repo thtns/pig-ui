@@ -15,20 +15,20 @@ export const tableOption = {
             "addDisplay": false,
             "editDisabled": true,
             width: 180,
-
         },
         {
             "type": "input",
             "label": "商家key",
             "prop": "clientKey",
             overHidden: true,
+            "addDisplay": false,
         },
         {
             "type": "input",
             "label": "商家aecSec",
             "prop": "aecSecret",
             overHidden: true,
-
+            "addDisplay": false,
         },
         {
             "type": "input",
