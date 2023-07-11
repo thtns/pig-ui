@@ -37,12 +37,14 @@ export const tableOption = {
     {
       "type": "input",
       "label": "失败原因",
-      "prop": "failureReason"
+      "prop": "failureReason",
+      overHidden:true,
     },
     {
       "type": "input",
       "label": "成功结果",
-      "prop": "result"
+      "prop": "result",
+      overHidden:true,
     },
     {
       "type": "input",
