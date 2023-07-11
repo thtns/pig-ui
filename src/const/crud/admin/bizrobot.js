@@ -17,15 +17,8 @@ export const tableOption = {
         },
         {
             "type": "input",
-            "label": "访问地址",
-            "prop": "robotUrl",
-            overHidden:true,
-        },
-        {
-            "type": "input",
-            "label": "代理Proxies",
-            "prop": "robotProxies",
-            overHidden:true,
+            "label": "代理名称",
+            "prop": "robotProxiesName"
         },
         {
             "type": "input",
@@ -35,8 +28,15 @@ export const tableOption = {
         },
         {
             "type": "input",
-            "label": "代理名称",
-            "prop": "robotProxiesName"
+            "label": "访问地址",
+            "prop": "robotUrl",
+            overHidden:true,
+        },
+        {
+            "type": "input",
+            "label": "代理Proxies",
+            "prop": "robotProxies",
+            overHidden:true,
         },
         {
             "type": "radio",
