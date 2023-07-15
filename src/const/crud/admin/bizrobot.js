@@ -34,6 +34,12 @@ export const tableOption = {
         },
         {
             "type": "input",
+            "label": "host",
+            "prop": "host",
+            overHidden:true,
+        },
+        {
+            "type": "input",
             "label": "代理Proxies",
             "prop": "robotProxies",
             overHidden:true,

@@ -33,12 +33,14 @@ export const tableOption = {
       "label": "logo地址",
       "prop": "logoUrl",
       overHidden:true,
+      hide: true
 
     },
     {
       "type": "input",
       "label": "wmi",
-      "prop": "wmi"
+      "prop": "wmi",
+      hide: true
     },
     {
       "type": "radio",
@@ -50,35 +52,40 @@ export const tableOption = {
       }, {
         label: '合资',
         value: 20
-      }]
+      }],
+      value: 20,
     },
     {
       "type": "input",
       "label": "创建人",
       "prop": "createBy",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     },
     {
       "type": "input",
       "label": "创建时间",
       "prop": "createTime",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     },
     {
       "type": "input",
       "label": "修改时间",
       "prop": "updateTime",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     },
     {
       "type": "input",
       "label": "更新人",
       "prop": "updateBy",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     }
   ]
 }

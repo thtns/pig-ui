@@ -34,13 +34,22 @@ export const tableOption = {
     {
       "type": "input",
       "label": "每日限单量",
-      "prop": "dailyLimitCount"
+      "prop": "dailyLimitCount",
+      value: 50
+    },
+    {
+      "type": "number",
+      "label": "权重",
+      "prop": "weight",
+      overHidden:true,
+      value: 1
     },
     {
       "type": "input",
       "label": "供应商logo",
       "prop": "logo",
       overHidden:true,
+      hide: true
     },
     {
       "type": "radio",
@@ -52,7 +61,8 @@ export const tableOption = {
       }, {
         label: '关闭',
         value: 0
-      }]
+      }],
+      value: 1
     },
     {
       "type": "input",
