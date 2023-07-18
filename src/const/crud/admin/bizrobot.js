@@ -18,7 +18,8 @@ export const tableOption = {
         {
             "type": "input",
             "label": "代理名称",
-            "prop": "robotProxiesName"
+            "prop": "robotProxiesName",
+            search: true,
         },
         {
             "type": "input",
@@ -68,6 +69,7 @@ export const tableOption = {
             "prop": "serviceStartTime",
             format: 'HH:mm:ss',
             valueFormat: 'HH:mm:ss',
+            hide: true
         },
         {
             "type": "time",
@@ -75,6 +77,7 @@ export const tableOption = {
             "prop": "serviceEndTime",
             format: 'HH:mm:ss',
             valueFormat: 'HH:mm:ss',
+            hide: true
         },
         {
             "type": "radio",

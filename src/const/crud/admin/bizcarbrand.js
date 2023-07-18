@@ -20,6 +20,7 @@ export const tableOption = {
       "type": "input",
       "label": "车辆品牌",
       "prop": "brand",
+      search: true,
       overHidden:true,
 
     },
@@ -43,17 +44,13 @@ export const tableOption = {
       hide: true
     },
     {
-      "type": "radio",
-      "label": "类型 ",
-      "prop": "type",
-      dicData: [{
-        label: '国产',
-        value: 10
-      }, {
-        label: '合资',
-        value: 20
-      }],
-      value: 20,
+      label: '类型',
+      prop: 'type',
+      type: 'radio',
+      slot: true,
+      border: true,
+      span: 24,
+      dicUrl: '/admin/dict/key/car_type'
     },
     {
       "type": "input",

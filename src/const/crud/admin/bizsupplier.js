@@ -19,7 +19,8 @@ export const tableOption = {
     {
       "type": "input",
       "label": "供应商名称",
-      "prop": "supplierName"
+      "prop": "supplierName",
+      search: true,
     },
     {
       "type": "input",
