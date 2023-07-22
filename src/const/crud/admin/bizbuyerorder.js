@@ -5,7 +5,10 @@ export const tableOption = {
   "stripe": true,
   "menuAlign": "center",
   "align": "center",
-  "searchMenuSpan": 6,
+  "searchMenuSpan": 3,
+  addBtn: false,
+  delBtn: false,
+  viewBtn: true,
   "column": [
     {
       "type": "input",
@@ -27,6 +30,20 @@ export const tableOption = {
     },
     {
       "type": "input",
+      "label": "品牌id",
+      "prop": "carBrandId",
+      hide: true
+    },
+    {
+      "type": "input",
+      "label": "品牌名称",
+      "prop": "carBrandName",
+      search: true,
+      searchSpan: 4 ,
+      searchRange: true
+    },
+    {
+      "type": "input",
       "label": "供应商ID",
       "prop": "supplierId",
       hide: true
@@ -38,14 +55,10 @@ export const tableOption = {
     },
     {
       "type": "input",
-      "label": "品牌id",
-      "prop": "carBrandId",
-      hide: true
-    },
-    {
-      "type": "input",
-      "label": "品牌名称",
-      "prop": "carBrandName"
+      "label": "VIN码",
+      "prop": "vin",
+      search: true,
+      searchSpan: 4 ,
     },
     {
       "type": "input",
@@ -60,55 +73,39 @@ export const tableOption = {
       hide: true
     },
     {
-      "type": "input",
+      "type": "datetime",
       "label": "请求时间",
-      "prop": "requestTime"
+      "prop": "requestTime",
+      // key: 'requestTime',
+      search: 'range',
+      searchSpan: 4 ,
     },
     {
       "type": "input",
       "label": "请求参数",
       "prop": "requestParams",
       overHidden: true,
+      hide: true
     },
     {
       "type": "input",
       "label": "请求header",
       "prop": "requestHeader",
       overHidden: true,
-    },
-    {
-      "type": "input",
-      "label": "VIN码",
-      "prop": "vin"
+      hide: true
     },
     {
       "type": "input",
       "label": "发动机号",
-      "prop": "engineCode"
+      "prop": "engineCode",
+      hide: true
     },
     {
       "type": "input",
       "label": "回调地址",
       "prop": "callbackUrl",
       overHidden: true,
-    },
-    {
-      "type": "radio",
-      "label": "结果状态码",
-      "prop": "requestStatus",
-      dicData: [{
-        label: '下单成功',
-        value: 1
-      }, {
-        label: '下单失败',
-        value: 2
-      }, {
-        label: '回调成功',
-        value: 3
-      }, {
-        label: '回调失败',
-        value: 4
-      }]
+      hide: true
     },
     {
       "type": "input",
@@ -123,10 +120,35 @@ export const tableOption = {
       hide: true
     },
     {
-      "type": "input",
+      "type": "datetime",
       "label": "回调时间",
       "prop": "callbackTime",
-      hide: true
+      search: 'range',
+      searchSpan: 4 ,
+    },
+    {
+      type: 'select',
+      "label": "结果状态码",
+      "prop": "requestStatus",
+      dataType: 'number',
+      dicUrl: '/admin/dict/key/order_status',
+      rules: [{
+        required: true, message: '请选择状态', trigger: 'blur'
+      }],
+      search: true,
+      searchLabelWidth: 90,
+      searchSpan: 3 ,
+    },
+    {
+      type: 'select',
+      "label": "是否有记录",
+      "prop": "anyData",
+      dataType: 'string',
+      dicUrl: '/admin/dict/key/order_is_data',
+      search: true,
+      searchLabelWidth: 90,
+      searchSpan: 3 ,
+
     },
     {
       "type": "input",

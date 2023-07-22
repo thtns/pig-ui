@@ -69,6 +69,7 @@
         methods: {
             getList(page, params) {
                 this.tableLoading = true
+                console.log(this.searchForm)
                 fetchList(Object.assign({
                     current: page.currentPage,
                     size: page.pageSize
@@ -117,6 +118,14 @@
                 this.page.currentPage = current
             },
             searchChange(form, done) {
+                if(form.requestTime){
+                  const requestTime = this.formatDateTime(form.requestTime)
+                  form.requestTime = requestTime
+                }
+                if (form.callbackTime){
+                  const callbackTime = this.formatDateTime(form.callbackTime)
+                  form.callbackTime = callbackTime
+                }
                 this.searchForm = form
                 this.page.currentPage = 1
                 this.getList(this.page, form)
@@ -124,7 +133,20 @@
             },
             refreshChange() {
                 this.getList(this.page)
-            }
+            },
+            formatDateTime(date) {
+              const year = date.getFullYear();
+              const month = this.padNumber(date.getMonth() + 1);
+              const day = this.padNumber(date.getDate());
+              const hours = this.padNumber(date.getHours());
+              const minutes = this.padNumber(date.getMinutes());
+              const seconds = this.padNumber(date.getSeconds());
+              return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`; // 使用字符串拼接构建时间字符串
+          },
+          padNumber(number) {
+            // 辅助函数，用于将数字补零为两位数
+            return String(number).padStart(2, "0");
+          }
         }
     }
 </script>
