@@ -54,3 +54,17 @@ export function putObj(obj) {
     data: obj
   })
 }
+
+export function rejectObj(id) {
+  return request({
+    url: '/admin/bizbuyerorder/reject/' + id,
+    method: 'get'
+  })
+}
+
+export function retryObj(id) {
+  return request({
+    url: '/admin/bizbuyerorder/retry/' + id,
+    method: 'get'
+  })
+}

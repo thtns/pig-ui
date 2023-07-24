@@ -9,6 +9,7 @@ export const tableOption = {
   addBtn: false,
   delBtn: false,
   viewBtn: true,
+  menuWidth: 270,
   "column": [
     {
       "type": "input",
@@ -39,7 +40,7 @@ export const tableOption = {
       "label": "品牌名称",
       "prop": "carBrandName",
       search: true,
-      searchSpan: 4 ,
+      searchSpan: 5 ,
       searchRange: true
     },
     {
@@ -51,7 +52,10 @@ export const tableOption = {
     {
       "type": "input",
       "label": "供应商名称",
-      "prop": "supplierName"
+      "prop": "supplierName",
+      search: true,
+      searchLabelWidth: 90,
+      searchSpan: 5
     },
     {
       "type": "input",
@@ -132,12 +136,9 @@ export const tableOption = {
       "prop": "requestStatus",
       dataType: 'number',
       dicUrl: '/admin/dict/key/order_status',
-      rules: [{
-        required: true, message: '请选择状态', trigger: 'blur'
-      }],
       search: true,
       searchLabelWidth: 90,
-      searchSpan: 3 ,
+      searchSpan: 4 ,
     },
     {
       type: 'select',
@@ -147,7 +148,7 @@ export const tableOption = {
       dicUrl: '/admin/dict/key/order_is_data',
       search: true,
       searchLabelWidth: 90,
-      searchSpan: 3 ,
+      searchSpan: 4 ,
 
     },
     {

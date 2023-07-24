@@ -31,13 +31,25 @@
                        @row-update="handleUpdate"
                        @row-save="handleSave"
                        @row-del="rowDel">
+              <template #menu="{size,row,index}">
+                <el-button @click="rowRetry(row,index)"
+                           icon="el-icon-position"
+                           text
+                           type="primary"
+                           :size="size">重试</el-button>
+                <el-button @click="rowReject(row,index)"
+                           icon="el-icon-turn-off"
+                           text
+                           type="primary"
+                           :size="size">驳回</el-button>
+              </template>
             </avue-crud>
         </basic-container>
     </div>
 </template>
 
 <script>
-    import {fetchList, getObj, addObj, putObj, delObj} from '@/api/admin/bizbuyerorder'
+    import {fetchList, getObj, addObj, putObj, delObj, rejectObj, retryObj} from '@/api/admin/bizbuyerorder'
     import {tableOption} from '@/const/crud/admin/bizbuyerorder'
     import {mapGetters} from 'vuex'
 
@@ -92,6 +104,30 @@
                     this.$message.success('删除成功')
                     this.getList(this.page)
                 }).catch(cancelorerror=>{})
+            },
+            rowReject: function (row, index) {
+              this.$confirm('是否确认驳回ID为' + row.id, '提示', {
+                confirmButtonText: '确定',
+                cancelButtonText: '取消',
+                type: 'warning'
+              }).then(function () {
+                return rejectObj(row.id)
+              }).then(data => {
+                this.$message.success('驳回订单成功')
+                this.getList(this.page)
+              }).catch(cancelorerror=>{})
+            },
+            rowRetry: function (row, index) {
+              this.$confirm('是否确认重试ID为' + row.id, '提示', {
+                confirmButtonText: '确定',
+                cancelButtonText: '取消',
+                type: 'warning'
+              }).then(function () {
+                return retryObj(row.id)
+              }).then(data => {
+                this.$message.success('驳回订单成功')
+                this.getList(this.page)
+              }).catch(cancelorerror=>{})
             },
             handleUpdate: function (row, index, done,loading) {
                 putObj(row).then(data => {
