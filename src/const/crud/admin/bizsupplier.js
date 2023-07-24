@@ -13,14 +13,15 @@ export const tableOption = {
       "prop": "id",
       "addDisplay": false,
       "editDisabled": true,
-      width:180,
-
+      width:170,
     },
     {
       "type": "input",
       "label": "供应商名称",
       "prop": "supplierName",
       search: true,
+      searchLabelWidth: 90,
+      searchSpan: 4 ,
     },
     {
       "type": "input",
@@ -63,7 +64,9 @@ export const tableOption = {
         label: '关闭',
         value: 0
       }],
-      value: 1
+      value: 1,
+      search: true,
+      searchSpan: 4 ,
     },
     {
       "type": "input",

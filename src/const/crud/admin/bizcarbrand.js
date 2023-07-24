@@ -13,7 +13,7 @@ export const tableOption = {
       "prop": "id",
       "addDisplay": false,
       "editDisabled": true,
-      width:180,
+      width:170,
 
     },
     {
@@ -22,7 +22,7 @@ export const tableOption = {
       "prop": "brand",
       search: true,
       overHidden:true,
-
+      searchSpan: 4 ,
     },
     {
       "type": "input",

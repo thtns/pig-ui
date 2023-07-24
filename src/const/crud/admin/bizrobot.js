@@ -17,9 +17,11 @@ export const tableOption = {
         },
         {
             "type": "input",
-            "label": "代理名称",
+            "label": "机器人名称",
             "prop": "robotProxiesName",
             search: true,
+            searchLabelWidth: 90,
+            searchSpan: 4 ,
         },
         {
             "type": "input",
@@ -90,7 +92,9 @@ export const tableOption = {
             }, {
                 label: '禁用',
                 value: false
-            }]
+            }],
+            search: true,
+            searchSpan: 4 ,
         },
         {
             "type": "input",
