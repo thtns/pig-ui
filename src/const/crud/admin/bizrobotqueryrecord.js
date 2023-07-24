@@ -6,6 +6,8 @@ export const tableOption = {
   "menuAlign": "center",
   "align": "center",
   "searchMenuSpan": 6,
+  addBtn: false,
+  viewBtn: true,
   "column": [
     {
       "type": "input",
@@ -31,20 +33,32 @@ export const tableOption = {
     },
     {
       "type": "input",
-      "label": "结果状态码：0：失败，1：成功，2：无结果",
-      "prop": "resultStatus"
+      "label": "结果状态码",
+      "prop": "resultStatus",
+      dicData: [{
+        label: '成功',
+        value: 1
+      },{
+        label: '失败',
+        value: 0
+      }, {
+        label: '无结果',
+        value: 2
+      }],
     },
     {
       "type": "input",
       "label": "失败原因",
       "prop": "failureReason",
       overHidden:true,
+      hide: true
     },
     {
       "type": "input",
       "label": "成功结果",
       "prop": "result",
       overHidden:true,
+      hide: true
     },
     {
       "type": "input",
@@ -56,28 +70,32 @@ export const tableOption = {
       "label": "创建人",
       "prop": "createBy",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     },
     {
       "type": "input",
       "label": "修改时间",
       "prop": "createTime",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     },
     {
       "type": "input",
       "label": "修改时间",
       "prop": "updateTime",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     },
     {
       "type": "input",
       "label": "更新人",
       "prop": "updateBy",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     }
   ]
 }
