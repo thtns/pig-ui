@@ -15,7 +15,7 @@ export const tableOption = {
       "editDisabled": true
     },
     {
-      "type": "input",
+      "type": "select",
       "label": "机器人id",
       "prop": "robotId",
       props: {
@@ -40,6 +40,7 @@ export const tableOption = {
       "type": "input",
       "label": "排序(权重)",
       "prop": "sort",
+      value: 1,
       hide: true
     },
     {
