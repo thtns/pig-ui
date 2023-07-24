@@ -17,17 +17,30 @@ export const tableOption = {
     {
       "type": "input",
       "label": "机器人id",
-      "prop": "robotId"
+      "prop": "robotId",
+      props: {
+        label: 'robotProxiesName',
+        value: 'id'
+      },
+      dicUrl: '/admin/bizrobot/all',
     },
     {
-      "type": "input",
       "label": "供应商id",
-      "prop": "supplierId"
+      "prop": "supplierId",
+      "type": "select",
+      props: {
+        label: 'supplierName',
+        value: 'id'
+      },
+      dicUrl: '/admin/bizsupplier/all',
+      search: true,
+      searchSpan: 4
     },
     {
       "type": "input",
       "label": "排序(权重)",
-      "prop": "sort"
+      "prop": "sort",
+      hide: true
     },
     {
       "type": "input",
@@ -48,14 +61,16 @@ export const tableOption = {
       "label": "修改时间",
       "prop": "updateTime",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     },
     {
       "type": "input",
       "label": "更新人",
       "prop": "updateBy",
       "addDisplay": false,
-      "editDisabled": true
+      "editDisabled": true,
+      hide: true
     }
   ]
 }

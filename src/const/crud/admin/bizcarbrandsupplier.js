@@ -15,14 +15,28 @@ export const tableOption = {
       "editDisabled": true
     },
     {
-      "type": "input",
+      type: 'select',
       "label": "品牌id",
-      "prop": "carBrandId"
+      "prop": "carBrandId",
+      props: {
+        label: 'brand',
+        value: 'id'
+      },
+      dicUrl: '/admin/bizcarbrand/all',
+      search: true,
+      searchSpan: 4
     },
     {
-      "type": "input",
       "label": "供应商id",
-      "prop": "supplierId"
+      "prop": "supplierId",
+      "type": "select",
+      props: {
+        label: 'supplierName',
+        value: 'id'
+      },
+      dicUrl: '/admin/bizsupplier/all',
+      search: true,
+      searchSpan: 4
     },
     {
       "type": "input",
