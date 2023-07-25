@@ -131,7 +131,7 @@
               }).then(function () {
                 return retryObj(row.id)
               }).then(data => {
-                this.$message.success('驳回订单成功')
+                this.$message.success('重试订单成功')
                 this.getList(this.page)
               }).catch(cancelorerror=>{})
             },

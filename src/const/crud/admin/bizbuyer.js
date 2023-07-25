@@ -63,16 +63,10 @@ export const tableOption = {
             "label": "状态",
             "prop": "status",
             value: 1,
-            dicData: [{
-                label: '正常',
-                value: 1
-            }, {
-                label: '禁用',
-                value: 2
-            }, {
-                label: '已过期',
-                value: 3
-            }]
+            search: true,
+            searchSpan: 4 ,
+            slot: true,
+            dicUrl: '/admin/dict/key/base_status',
         },
         {
             "type": "datetime",
