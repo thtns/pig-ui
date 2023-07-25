@@ -57,16 +57,11 @@ export const tableOption = {
       "type": "radio",
       "label": "状态",
       "prop": "status",
-      dicData: [{
-        label: '开启',
-        value: 1
-      }, {
-        label: '关闭',
-        value: 0
-      }],
       value: 1,
       search: true,
       searchSpan: 4 ,
+      slot: true,
+      dicUrl: '/admin/dict/key/base_status',
     },
     {
       "type": "input",

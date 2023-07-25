@@ -31,6 +31,9 @@
                        @row-update="handleUpdate"
                        @row-save="handleSave"
                        @row-del="rowDel">
+              <template #status="scope">
+                <dict-tag :options="scope.dic" :value="scope.row.status" />
+              </template>
             </avue-crud>
         </basic-container>
     </div>
