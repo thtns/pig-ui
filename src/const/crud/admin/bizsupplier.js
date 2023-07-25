@@ -37,7 +37,10 @@ export const tableOption = {
       "type": "input",
       "label": "每日限单量",
       "prop": "dailyLimitCount",
-      value: 50
+      value: 50,
+      formatter:(val,value,label)=>{
+        return val.dailyCount+'/'+val.dailyLimitCount
+      }
     },
     {
       "type": "number",
