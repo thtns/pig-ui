@@ -43,6 +43,12 @@
                            type="primary"
                            :size="size">驳回</el-button>
               </template>
+              <template #requestStatus="scope">
+                <dict-tag :options="scope.dic" :value="scope.row.requestStatus" />
+              </template>
+              <template #anyData="scope">
+                <dict-tag :options="scope.dic" :value="scope.row.anyData" />
+              </template>
             </avue-crud>
         </basic-container>
     </div>
@@ -62,7 +68,7 @@
                 page: {
                     total: 0, // 总页数
                     currentPage: 1, // 当前页数
-                    pageSize: 20 // 每页显示多少条
+                    pageSize: 10 // 每页显示多少条
                 },
                 tableLoading: false,
                 tableOption: tableOption

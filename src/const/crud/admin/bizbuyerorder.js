@@ -134,11 +134,12 @@ export const tableOption = {
       type: 'select',
       "label": "结果状态码",
       "prop": "requestStatus",
-      dataType: 'number',
+      dataType: 'number/string',
       dicUrl: '/admin/dict/key/order_status',
       search: true,
       searchLabelWidth: 90,
       searchSpan: 4 ,
+      slot: true,
     },
     {
       type: 'select',
@@ -149,7 +150,7 @@ export const tableOption = {
       search: true,
       searchLabelWidth: 90,
       searchSpan: 4 ,
-
+      slot: true,
     },
     {
       "type": "input",
