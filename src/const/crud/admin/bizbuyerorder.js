@@ -19,28 +19,55 @@ export const tableOption = {
       "editDisabled": true
     },
     {
-      "type": "input",
-      "label": "采购商Id",
+      "type": "select",
+      "label": "采购商",
       "prop": "buyerId",
-      hide: true
-    },
-    {
-      "type": "input",
-      "label": "采购商名称",
-      "prop": "buyerName"
-    },
-    {
-      "type": "input",
-      "label": "品牌id",
-      "prop": "carBrandId",
-      hide: true
-    },
-    {
-      "type": "input",
-      "label": "品牌名称",
-      "prop": "carBrandName",
+      props: {
+        label: 'name',
+        value: 'id'
+      },
+      dicUrl: '/admin/bizbuyer/all',
       search: true,
-      searchSpan: 5 ,
+      searchSpan: 4 ,
+    },
+    // {
+    //   "type": "input",
+    //   "label": "采购商名称",
+    //   "prop": "buyerName"
+    // },
+    {
+      "type": "select",
+      "label": "品牌",
+      "prop": "carBrandId",
+      dicUrl: '/admin/bizcarbrand/all',
+      props: {
+        label: 'brand',
+        value: 'id'
+      },
+      typeformat (item, label, value) {
+        if(item.manufacturer != null){
+          return item.brand + '-' + item.manufacturer
+        }else{
+          return item.brand
+        }
+      },
+      search: true,
+      searchSpan: 4
+    },
+    // {
+    //   "type": "input",
+    //   "label": "品牌名称",
+    //   "prop": "carBrandName",
+    //   search: true,
+    //   searchSpan: 4 ,
+    //   searchRange: true
+    // },
+    {
+      "type": "input",
+      "label": "厂商名称",
+      "prop": "manufacturer",
+      search: true,
+      searchSpan: 4 ,
       searchRange: true
     },
     {
@@ -55,14 +82,14 @@ export const tableOption = {
       "prop": "supplierName",
       search: true,
       searchLabelWidth: 90,
-      searchSpan: 5
+      searchSpan: 4
     },
     {
       "type": "input",
       "label": "VIN码",
       "prop": "vin",
       search: true,
-      searchSpan: 4 ,
+      searchSpan: 5
     },
     {
       "type": "input",
@@ -132,12 +159,11 @@ export const tableOption = {
     },
     {
       type: 'select',
-      "label": "结果状态码",
+      "label": "订单状态",
       "prop": "requestStatus",
       dataType: 'number/string',
       dicUrl: '/admin/dict/key/order_status',
       search: true,
-      searchLabelWidth: 90,
       searchSpan: 4 ,
       slot: true,
     },

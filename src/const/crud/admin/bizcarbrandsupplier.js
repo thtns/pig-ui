@@ -23,6 +23,13 @@ export const tableOption = {
         value: 'id'
       },
       dicUrl: '/admin/bizcarbrand/all',
+      typeformat (item, label, value) {
+        if(item.manufacturer != null){
+          return item.brand + '-' + item.manufacturer
+        }else{
+          return item.brand
+        }
+      },
       search: true,
       searchSpan: 4
     },

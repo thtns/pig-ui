@@ -26,6 +26,14 @@ export const tableOption = {
     },
     {
       "type": "input",
+      "label": "厂商名称",
+      "prop": "manufacturer",
+      search: true,
+      searchSpan: 5 ,
+      searchRange: true
+    },
+    {
+      "type": "input",
       "label": "品牌首字母",
       "prop": "letter"
     },

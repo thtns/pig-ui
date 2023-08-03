@@ -188,7 +188,17 @@
           padNumber(number) {
             // 辅助函数，用于将数字补零为两位数
             return String(number).padStart(2, "0");
-          }
+          },
+          getStartOfDay() {
+            const startOfDay = new Date();
+            startOfDay.setHours(0, 0, 0, 0);
+            return startOfDay;
+          },
+          getEndOfDay() {
+            const endOfDay = new Date();
+            endOfDay.setHours(23, 59, 59, 999);
+            return endOfDay;
+          },
         }
     }
 </script>
