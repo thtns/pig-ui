@@ -63,6 +63,7 @@
         name: 'bizbuyerorder',
         data() {
             return {
+                timer: null,
                 searchForm: {},
                 tableData: [],
                 page: {
@@ -199,6 +200,29 @@
             endOfDay.setHours(23, 59, 59, 999);
             return endOfDay;
           },
-        }
+          startTimer() {
+            this.timer = setInterval(() => {
+              // 定时任务逻辑
+              this.refreshChange()
+            }, 20 * 1000);
+          },
+          stopTimer() {
+            clearInterval(this.timer);
+          },
+        },
+        created() {
+          if (this.timer){
+            clearInterval(this.timer);
+          }
+          this.startTimer();
+        },
+        beforeRouteLeave(to, from, next) {
+          // 在路由离开时执行清理操作
+          // 这里可以调用清理函数或者取消异步操作
+          // 然后再调用 next() 完成路由切换
+          this.stopTimer()
+          next();
+        },
+
     }
 </script>
