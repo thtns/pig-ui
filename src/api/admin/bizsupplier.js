@@ -54,3 +54,10 @@ export function putObj(obj) {
     data: obj
   })
 }
+
+export function closeAll(type) {
+  return request({
+    url: '/admin/bizsupplier/closeAll/' + type,
+    method: 'get',
+  })
+}

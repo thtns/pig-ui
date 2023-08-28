@@ -6,6 +6,10 @@ export const tableOption = {
     "menuAlign": "center",
     "align": "center",
     "searchMenuSpan": 6,
+    defaultSort:{
+        prop: 'robotProxiesName',
+        order: 'ascending'
+    },
     "column": [
         {
             "type": "input",
@@ -16,6 +20,7 @@ export const tableOption = {
             width:180,
         },
         {
+            // sortable:true,
             "type": "input",
             "label": "机器人名称",
             "prop": "robotProxiesName",

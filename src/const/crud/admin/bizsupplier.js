@@ -6,6 +6,10 @@ export const tableOption = {
   "menuAlign": "center",
   "align": "center",
   "searchMenuSpan": 6,
+  defaultSort:{
+    prop: 'supplierName',
+    order: 'ascending'
+  },
   "column": [
     {
       "type": "input",
@@ -16,6 +20,7 @@ export const tableOption = {
       width:170,
     },
     {
+      sortable:true,
       "type": "input",
       "label": "供应商名称",
       "prop": "supplierName",
@@ -34,6 +39,7 @@ export const tableOption = {
       "prop": "contactMobile"
     },
     {
+      sortable:true,
       "type": "input",
       "label": "当前单量",
       "prop": "dailyCount",
@@ -45,6 +51,7 @@ export const tableOption = {
       value: 50,
     },
     {
+      sortable:true,
       "type": "number",
       "label": "权重",
       "prop": "weight",

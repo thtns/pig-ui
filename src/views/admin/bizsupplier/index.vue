@@ -34,13 +34,17 @@
               <template #status="scope">
                 <dict-tag :options="scope.dic" :value="scope.row.status" />
               </template>
+              <template #menu-left="{}">
+                <el-button type="primary" icon="el-icon-turn-off" @click="doAll(0)">关 闭</el-button>
+                <el-button type="primary" icon="el-icon-open" @click="doAll(1)">打 开</el-button>
+              </template>
             </avue-crud>
         </basic-container>
     </div>
 </template>
 
 <script>
-    import {fetchList, getObj, addObj, putObj, delObj} from '@/api/admin/bizsupplier'
+    import {fetchList, getObj, addObj, putObj, delObj, closeAll} from '@/api/admin/bizsupplier'
     import {tableOption} from '@/const/crud/admin/bizsupplier'
     import {mapGetters} from 'vuex'
 
@@ -127,7 +131,20 @@
             },
             refreshChange() {
                 this.getList(this.page)
-            }
+            },
+            doAll(type){
+              closeAll(type).then(data => {
+                if (type === 0){
+                  this.$message.success('关闭成功')
+                }else{
+                  this.$message.success('打开成功')
+                }
+                this.getList(this.page)
+                done()
+              }).catch(() => {
+                loading();
+              });
+            },
         }
     }
 </script>
