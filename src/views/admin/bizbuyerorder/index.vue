@@ -49,6 +49,18 @@
               <template #anyData="scope">
                 <dict-tag :options="scope.dic" :value="scope.row.anyData" />
               </template>
+<!--              <template slot="menuLeft">-->
+              <template #menu-left="{}">
+<!--                <el-button type="primary" icon="el-icon-turn-off" @click="doAll(0)">关 闭</el-button>-->
+<!--                <el-button type="primary" icon="el-icon-open" @click="doAll(1)">打 开</el-button>-->
+
+                <el-button
+                    class="filter-item"
+                    plain
+                    type="primary"
+                    icon="el-icon-download"
+                    @click="exportExcel">导出</el-button>
+              </template>
             </avue-crud>
         </basic-container>
     </div>
@@ -209,6 +221,9 @@
           stopTimer() {
             clearInterval(this.timer);
           },
+          exportExcel() {
+            this.downBlobFile("/admin/bizbuyerorder/export", this.searchForm, "订单数据.xlsx");
+          }
         },
         created() {
           if (this.timer){
@@ -223,6 +238,7 @@
           this.stopTimer()
           next();
         },
+
 
     }
 </script>
