@@ -32,7 +32,16 @@
                        @row-save="handleSave"
                        @row-del="rowDel">
               <template #status="scope">
-                <dict-tag :options="scope.dic" :value="scope.row.status" />
+<!--                <dict-tag :options="scope.dic" :value="scope.row.status" />-->
+                <el-switch
+                    v-model="scope.row.status"
+                    active-color="#13ce66"
+                    inactive-color="#ff4949"
+                    :active-value="1"
+                    :inactive-value="0"
+                    @click.native="disable(scope.row)"
+                />
+
               </template>
               <template #menu-left="{}">
                 <el-button type="primary" icon="el-icon-turn-off" @click="doAll(0)">关 闭</el-button>
@@ -74,6 +83,15 @@
             }
         },
         methods: {
+            disable: function (row){
+              putObj(row).then(data => {
+                this.$message.success('修改成功')
+                done()
+                this.getList(this.page)
+              }).catch(() => {
+                this.getList(this.page)
+              });
+            },
             getList(page, params) {
                 this.tableLoading = true
                 fetchList(Object.assign({
