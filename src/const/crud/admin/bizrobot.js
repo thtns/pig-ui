@@ -20,7 +20,7 @@ export const tableOption = {
             width:180,
         },
         {
-            // sortable:true,
+            sortable:true,
             "type": "input",
             "label": "机器人名称",
             "prop": "robotProxiesName",
